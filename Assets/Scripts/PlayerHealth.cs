@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public HealthBarWidget healthBar;
-    public HealthPointsWidget healthPoints;
 
     private int health;
 
@@ -40,12 +39,6 @@ public class PlayerHealth : MonoBehaviour
         if(healthBar != null)
             healthBar.UpdateHealth(health, maxHealth);
 
-        if (healthPoints != null)
-        {
-            healthPoints.Init(5);
-            
-        }
-        
     }
 
     void Damage(int amount)
